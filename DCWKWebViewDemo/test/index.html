@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
+	<title>打印相册</title>
+	<style>
+            body{max-width:800px;margin:0 auto;}
+            .button{display:block;position:fixed;bottom:1.5rem;left:30%;margin:0 auto;height:2.25rem;width:40%;text-align:center;line-height:2.25rem;color:rgb(255,255,255);background:rgb(255, 80, 92);border-radius:6rem;border:0.125rem solid rgb(255,255, 255);text-decoration: none;font-weight: 400!important;font-size:0.875rem;}
+            .bottom{height:4rem}
+	</style>
+</head>
+ <body> 
+	<div class="costom wrap">
+		<img id="desc" usemap="#linkmap" src="print_img_detail_lomo.png" alt="print_bg_service" width="100%" height="auto"/>
+                <map name="linkmap" id="linkmap">
+		    <area shape="rect" coords="0,0,747,118" href="https://www.albume.cn/lomo.html">
+		</map>
+	</div>
+	<div class="bottom"></div>
+        <a class="button" href="javascript:void(0)" style="display:none">立即打印</a>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $('.button').click(function(){
+        $(this).attr("href", "lomo://");
+    });
+
+    var urlParam = getReparam();
+    if ('true' == urlParam['show-buy-button'])
+    {
+    	$('.button').show();    
+    }
+
+    function getReparam()
+    {
+        var urlParamobj = new Object();
+
+        var url = window.location.search;
+        if (url.indexOf('?') != -1)
+        {
+            var urlStr = url.substr(1);
+            urlParam = urlStr.split('&');
+            for(var i=0; i<urlParam.length; i++)
+            {
+                var paramKey = urlParam[i].split('=')[0];
+                var paramValue = unescape(urlParam[i].split('=')[1]);
+                urlParamobj[paramKey] = paramValue;
+            }
+         }
+
+         return urlParamobj;
+    }
+</script>
+</html>
