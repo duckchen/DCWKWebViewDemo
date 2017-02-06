@@ -1,0 +1,390 @@
+html {
+	font-size: 62.5%;
+	color: #222
+}
+
+@media screen and (min-width:20em) {
+	html {
+		font-size: 62.5%
+	}
+}
+
+@media screen and (min-width:22.5em) {
+	html {
+		font-size: 70%
+	}
+}
+
+@media screen and (min-width:25em) {
+	html {
+		font-size: 78%
+	}
+}
+
+@media screen and (min-width:27.5em) {
+	html {
+		font-size: 86%
+	}
+}
+
+@media screen and (min-width:30em) {
+	html {
+		font-size: 93.75%
+	}
+}
+
+@media screen and (min-width:40em) {
+	html {
+		font-size: 125%
+	}
+}
+
+body {
+	font-family: "微软雅黑"!important;
+	font-size: 1.2rem;
+	font-weight: 400!important;
+	background-color: #ebebeb!important
+}
+
+div {
+	width: 100%
+}
+
+img {
+	display: block
+}
+
+a {
+	font-weight: 400!important;
+	color: #fff;
+	font-size: 1.6rem;
+	text-decoration: none
+}
+
+.wrap,.item {
+	margin-bottom: 1rem
+}
+
+.campaign {
+	position: relative
+}
+
+.showBuy {
+	width: 36%;
+	position: absolute;
+	bottom: 25%;
+	left: 51%
+}
+
+.costom {
+	position: relative
+}
+
+.showCos {
+	width: 41%;
+	position: absolute;
+	bottom: 37%;
+	left: 51%
+}
+
+.post {
+	position: relative
+}
+
+.showPost {
+	width: 27%;
+	position: absolute;
+	bottom: 39%;
+	left: 51%
+}
+
+.explain {
+	margin-bottom: 6rem
+}
+
+.printbtn {
+	width: 100%;
+	height: 6rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #fff
+}
+
+.printwrap {
+	position: relative;
+	width: 100%;
+	height: 6rem
+}
+
+.printwrap:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #c9c9c9;
+	-webkit-transform: scaleY(.5);
+	-ms-transform: scaleY(.5);
+	-o-transform: scaleY(.5);
+	transform: scaleY(.5)
+}
+
+.btnbox {
+	width: 89%;
+	height: 4rem;
+	padding: 1rem 0;
+	margin: 0 auto
+}
+
+.btn {
+	width: 48%;
+	height: 4rem;
+	display: block;
+	background-color: #ff505c;
+	text-shadow: none;
+	float: left;
+	line-height: 4rem;
+	text-align: center;
+	color: #fff!important;
+	border-radius: 5px
+}
+
+.weixin {
+	float: right
+}
+
+#coverPage {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 10;
+	display: block;
+	display: none
+}
+
+#showPrint {
+        width: 25rem;
+        min-width:300px;
+	position: fixed;
+	top: 55%;
+	left: 10%;
+	margin-top: -20rem;
+	background-color: #fff;
+	border-radius: 10px;
+	z-index: 11;
+	display: none
+}
+
+.content {
+	width: 21.66666666666667rem;
+	margin: 0 auto
+}
+
+.content h1 {
+	font-size: 1.391304rem;
+	color: #0070ff;
+	margin: 1.25rem 0;
+	text-align: center;
+	font-weight: 500
+}
+
+.content .num {
+	margin-right: 0.666666rem
+}
+
+p {
+	margin: 0 0 .2rem
+}
+
+.content .citem {
+	margin-bottom: 1.25rem
+}
+
+.content .oitem {
+	margin-left: 1.5rem
+}
+
+.closeBtn {
+	width: 100%;
+	height: 3.666666666rem;
+	line-height: 4.2rem;
+	display: block;
+	color: #0070ff!important;
+	text-align: center;
+	position: relative
+}
+
+.closeBtn:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #c9c9c9;
+	-webkit-transform: scaleY(.5);
+	-ms-transform: scaleY(.5);
+	-o-transform: scaleY(.5);
+	transform: scaleY(.5)
+}
+
+#whereToBuy {
+        width: 25rem;
+        min-width:300px;
+	position: fixed;
+	top: 50%;
+	left: 10%;
+	margin-top: -7rem;
+	background-color: #fff;
+	border-radius: 10px;
+	z-index: 11;
+	display: none
+}
+
+.toPrint {
+	width: 100%;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	display: block;
+	text-align: center;
+	font-size: 1.6rem;
+	color: #54575a!important;
+	position: relative
+}
+
+.toPrint:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #c9c9c9;
+	-webkit-transform: scaleY(.5);
+	-ms-transform: scaleY(.5);
+	-o-transform: scaleY(.5);
+	transform: scaleY(.5)
+}
+
+.cancel {
+	width: 100%;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	display: block;
+	text-align: center;
+	font-size: 1.6rem;
+	color: #0070ff!important
+}
+
+#weixinTip {
+	width: 25rem;
+        min-width:300px;
+	background-color: #ffffff;
+	border-radius: 0.446rem;
+	position: fixed;
+	top: 50%;
+	left: 10%;
+	margin-top: -19rem;
+	z-index: 15;
+	display: none;
+}
+
+.weixinContent {
+	width: 86%;
+	margin: 0 auto;
+        margin-top: 1.6666666rem;
+	color: rgb(84,87,90);
+	font-size: 1.25rem;
+}
+.weixinTitle {
+	text-align:center;
+	margin-top:1.6666666rem;
+	font-size: 1.428rem;
+	color: rgb(84,87,90);
+	font-weight: 400!important;
+}
+.tipLogo {
+	text-align:center;
+	margin-top: 0.83333333rem;
+}
+.tipLogo img {
+	height:3.33333333rem;
+	max-width:250px;
+	margin: 0 auto;
+}
+.inputCp {
+        height:20px;
+        text-align:center;
+        font-size:18px;
+        font-weight:600!important;
+        opacity:0; 
+}
+.inputCp #copy {
+        width:100%;
+        height:30px;
+        display:block;
+        border:0px;
+        text-align:center;
+        font-size=6px;
+        padding:0;margin:0;
+}
+.weixinContent .picGuide {
+	text-align:center;
+	margin: 0 auto;
+	margin-top: 0.833333rem;
+}
+.weixinContent .picGuide img{
+        height: 8.3333333rem;
+	display: inline;
+}
+#weixinTip .copyButton {
+	width:21.6666666rem;
+        height:2.3333333rem;
+	margin: 0 auto;
+	margin-top: 1.1666666rem;
+	text-align: center;
+}
+.copyButton a{
+        width:100%;
+        line-height:2.3333333rem;
+        font-size:0.846em; 
+        border-radius:0.2083333rem;
+        display:block;
+        background-color:#FF505C;
+}
+#weixinTip .line {
+	width:100%;
+	height:0.08333333333rem;
+	margin:0 auto;
+	margin-top:1.1666666rem;
+	background-color:#c9c9c9;
+}
+
+#weixinTip .tarBar {
+        width:100%;
+        height: 5rem;
+        background: #c9c9c9;
+}
+.tarBar a {
+        width:12.4583333rem;
+        min-width:149.5px;
+	height:5rem;
+        display: block;
+        background-color: #FFFFFF;
+        font-size:1.42857142857rem;
+	text-align:center;
+	color: #007AFF;
+	line-height:5rem;
+}
+
+.tarbarLine {
+        width:0.08333333333333333333333rem;
+        display: block;
+	height:100%;
+	background-color:#c9c9c9;
+}

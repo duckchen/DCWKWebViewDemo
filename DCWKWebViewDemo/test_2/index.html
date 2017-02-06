@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
+	<title>打印相册</title>
+	<link rel="stylesheet" type="text/css" href="normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="printpage.min.css">
+</head>
+ <body> 
+	<!--campaign-->
+        <!--
+	<div class="campaign wrap">
+		<img src="print_bg_sale.png" alt="print_bg_sale" width="100%" height="auto"/>
+		<a href="javascript:void(0);" class="showBuy" id="showBuy">
+			<img src="print_btn_sale.png" alt="print_btn_sale" width="100%" height="auto">
+		</a>
+	</div>-->
+	<!--costom-->
+	<div class="costom wrap">
+		<img src="print_bg_service.png" alt="print_bg_service" width="100%" height="auto"/>
+		<a href="./showPrint.html" class="showCos">
+			<img src="print_btn_service.png" alt="print_btn_service" width="100%" height="auto">
+		</a>	
+	</div>
+	<!--post-->
+	<div class="post wrap">
+		<img src="print_bg_step.png" alt="print_bg_step" width="100%" height="auto"/>
+		<a href="javascript:void(0);" class="showPost" id="showPost">
+			<img src="print_btn_step.png" alt="print_btn_step" width="100%" height="auto">
+		</a>
+	</div>
+	<!--product-->
+	<div class="product wrap">
+		<img src="print_bg_type.png" alt="print_bg_type" width="100%" height="auto"/>
+	</div>
+	<!--explain-->
+	<div class="explain">	
+		<img src="print_bg_detail.png" alt="print_bg_detail" width="100%" height="auto"/>
+	</div>
+	<!--printbtn-->
+	<div class="printbtn">
+		<div class="printwrap">
+			<div class="btnbox">
+				<a href="javascript:void(0);" class="btn taobao toTaobao">去淘宝打印</a>
+				<a href="javascript:void(0);" class="btn weixin toWeixin">去微信打印</a>
+			</div>
+		</div>
+	</div>
+	<div id="coverPage"></div>
+	<!--whereToBuy-->
+	<div id="whereToBuy">
+		<a href="javascript:void(0);" class="toPrint toTaobao">去淘宝打印</a>
+		<a href="javascript:void(0);" class="toPrint toWeixin">去微信打印</a>
+		<a href="javascript:void(0);" id="cancel" class="cancel">取消</a>
+	</div>
+	<!--showPrint-->
+	<div id="showPrint" style="font-size:1.13rem">
+		<div class="content">
+			<h1>打印流程</h1>
+			<div class="citem">
+				<p><span class="num">1.</span>选中相册后，点击屏幕下方【去淘宝打</p>
+				<p class="oitem">印】或【去微信打印】;</p>
+			</div>
+			<div class="citem">
+				<p><span class="num">2.</span>跳转至淘宝商城或微信商城后点击【联</p>
+				<p class="oitem">系卖家】，将您的需求告诉客服，客服</p>
+				<p class="oitem">将全程为您挑选照片、免费排版、免费</p>
+				<p class="oitem">设计、免费制作;</p>
+			</div>
+			<div class="citem">
+				<p><span class="num">3.</span>客服将制作好的相册给您预览，满意后</p>
+				<p class="oitem">您再拍下商品、提交订单、付款，就可</p>
+				<p class="oitem">以在家坐等收货了;</p>
+			</div>
+			<div class="citem">
+				<p><span class="num">4.</span>打印工厂为您定制相册，完成纸质相册</p>
+				<p class="oitem">输出;</p>
+			</div>
+			<div class="citem">
+				<p><span class="num">5.</span>物流免费送货上门。</p>
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="closeBtn" id="closeBtn">我知道了</a>
+	</div>
+	<!--weixinTip-->
+        <div id="weixinTip">
+                <div class="weixinTitle">请添加微信公众号进行打印</div>
+                <div class="tipLogo">
+                    <img src="./print_logo_wechat.png"/>
+                </div>
+                <div class="weixinContent">
+                    <div class="textDesc">
+                        <span>
+                            复制公众号名称后，在微信主页右上角点击【+】，依次选择：【添加朋友】-【公众号】- 将公众号名称粘贴至输入框，即可进行搜索添加。
+                        </span>
+                    </div>
+                    <div class="picGuide">
+                        <img src="./print_pop_img_01.png"/>
+                        <img src="./print_pop_img_02.png"/>
+                    </div>
+                </div>
+                <div class="copyButton">
+                    <a id="copy" onclick="copy(this)" href="javascript:void(0)"/>点击复制公众号名称</a>
+                </div>
+                <div class="line"></div>
+                <div class="tarBar" style="text-align:center;">
+                    <a href="javascript:void(0);" class="btnLeft" style="float:left">稍后再说</a>
+                    <a href="javascript:void(0);" class="btnRight" style="float:right">前往微信</a>
+                    <div style="clear:both;"></div>
+                </div>
+        </div>
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript" src="printpage.min.js"></script>
+        <script type="text/javascript">
+	    $(".toTaobao").on("click",function(){
+                var urlParam = getReparam();
+                var isSucc = urlParam.isInstalledTaobao;
+		if(isSucc !== null){
+			if(isSucc){
+				if(isSucc == "true"){
+					$(".toTaobao").attr("href","taobao://shop460441122.taobao.com");
+				}else{
+					$(".toTaobao").attr("href","https://shop460441122.taobao.com");
+				}
+			}else{
+				$(".toTaobao").attr("href","https://shop460441122.taobao.com");
+			}
+		}else{
+			$(".toTaobao").attr("href","http://e22a.com/h.YOzyI7?cv=AAYtcUcf&sm=2103eb");
+		}
+	 });
+        </script> 
+</body>
+</html>

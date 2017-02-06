@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
 
-static NSString * const DCTestDirectoryName = @"/test";
-static NSString * const DCIndexName         = @"print_album.html";
+static NSString * const DCTestDirectoryName = @"/test_2";
+static NSString * const DCIndexName         = @"index.html";
 
 @interface ViewController () <WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
@@ -27,6 +27,7 @@ static NSString * const DCIndexName         = @"print_album.html";
 // MARK: - Getter Mthods
 //--------------------------------------------------------------------
 
+// app/resource/test
 - (NSString *)testPath
 {
     if (_testPath == nil) {
@@ -37,6 +38,7 @@ static NSString * const DCIndexName         = @"print_album.html";
     return _testPath;
 }
 
+// app/resource/test/XXXX.html
 - (NSString *)testFilePath
 {
     if (_testFilePath == nil) {
@@ -104,7 +106,8 @@ static NSString * const DCIndexName         = @"print_album.html";
 - (void)setupWebView
 {
     WKWebViewConfiguration *configration = [self getConfigration];
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,kScreenHeight) configuration:configration];
+    [configration.userContentController addScriptMessageHandler:self name:@"toweixin://"];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,kScreenHeight - 64) configuration:configration];
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;
     [self.view addSubview:_webView];
@@ -113,6 +116,7 @@ static NSString * const DCIndexName         = @"print_album.html";
     NSURL *directoryPath = [NSURL fileURLWithPath:self.testPath];
     
     [self.webView loadFileURL:fileUrl allowingReadAccessToURL:directoryPath];
+    
 }
 
 - (WKWebViewConfiguration *)getConfigration
@@ -145,22 +149,22 @@ static NSString * const DCIndexName         = @"print_album.html";
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
-    DC_LOG(@"webView111,progress:%f", webView.estimatedProgress);
+//    DC_LOG(@"webView111,progress:%f", webView.estimatedProgress);
 }
 
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation
 {
-    DC_LOG(@"webView222,progress:%f", webView.estimatedProgress);
+//    DC_LOG(@"webView222,progress:%f", webView.estimatedProgress);
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
-    DC_LOG(@"webView333,progress:%f", webView.estimatedProgress);
+//    DC_LOG(@"webView333,progress:%f", webView.estimatedProgress);
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
-    DC_LOG(@"webView444,progress:%f", webView.estimatedProgress);
+//    DC_LOG(@"webView444,progress:%f", webView.estimatedProgress);
 }
 
 // MARK: - WKScriptMessageHandler Methods
@@ -168,7 +172,7 @@ static NSString * const DCIndexName         = @"print_album.html";
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
-    DC_LOG(@"didReceiveScriptMessage:%@", message);
+    DC_LOG(@"didReceiveScriptMessage:%@", message.body);
 }
 
 // MARK: - Private Methods

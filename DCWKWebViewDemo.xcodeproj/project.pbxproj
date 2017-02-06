@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC024C611E480E74006D6A33 /* test_2 in Resources */ = {isa = PBXBuildFile; fileRef = EC024C601E480E74006D6A33 /* test_2 */; };
 		EC48FF391E344DF3000D055A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48FF381E344DF3000D055A /* main.m */; };
 		EC48FF3C1E344DF3000D055A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48FF3B1E344DF3000D055A /* AppDelegate.m */; };
 		EC48FF3F1E344DF3000D055A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48FF3E1E344DF3000D055A /* ViewController.m */; };
@@ -17,11 +18,6 @@
 		EC48FF5D1E344DF3000D055A /* DCWKWebViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48FF5C1E344DF3000D055A /* DCWKWebViewDemoUITests.m */; };
 		EC48FF6C1E344E29000D055A /* DCBaseNanigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48FF6B1E344E29000D055A /* DCBaseNanigationController.m */; };
 		EC48FF701E345226000D055A /* test in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF6F1E345226000D055A /* test */; };
-		EC48FF761E345C72000D055A /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF711E345C72000D055A /* index.html */; };
-		EC48FF771E345C72000D055A /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF721E345C72000D055A /* jquery.min.js */; };
-		EC48FF781E345C72000D055A /* lomoDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF731E345C72000D055A /* lomoDesc.html */; };
-		EC48FF791E345C72000D055A /* print_img_detail_lomo.png in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF741E345C72000D055A /* print_img_detail_lomo.png */; };
-		EC48FF7A1E345C72000D055A /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC48FF751E345C72000D055A /* version.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC024C601E480E74006D6A33 /* test_2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test_2; sourceTree = "<group>"; };
 		EC48FF341E344DF3000D055A /* DCWKWebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCWKWebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC48FF381E344DF3000D055A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC48FF3A1E344DF3000D055A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,11 +58,6 @@
 		EC48FF6A1E344E29000D055A /* DCBaseNanigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBaseNanigationController.h; sourceTree = "<group>"; };
 		EC48FF6B1E344E29000D055A /* DCBaseNanigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBaseNanigationController.m; sourceTree = "<group>"; };
 		EC48FF6F1E345226000D055A /* test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test; sourceTree = "<group>"; };
-		EC48FF711E345C72000D055A /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		EC48FF721E345C72000D055A /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		EC48FF731E345C72000D055A /* lomoDesc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lomoDesc.html; sourceTree = "<group>"; };
-		EC48FF741E345C72000D055A /* print_img_detail_lomo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = print_img_detail_lomo.png; sourceTree = "<group>"; };
-		EC48FF751E345C72000D055A /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +153,7 @@
 		EC48FF6E1E345198000D055A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				EC48FF711E345C72000D055A /* index.html */,
-				EC48FF721E345C72000D055A /* jquery.min.js */,
-				EC48FF731E345C72000D055A /* lomoDesc.html */,
-				EC48FF741E345C72000D055A /* print_img_detail_lomo.png */,
-				EC48FF751E345C72000D055A /* version.txt */,
+				EC024C601E480E74006D6A33 /* test_2 */,
 				EC48FF6F1E345226000D055A /* test */,
 			);
 			name = Resource;
@@ -280,14 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC48FF761E345C72000D055A /* index.html in Resources */,
+				EC024C611E480E74006D6A33 /* test_2 in Resources */,
 				EC48FF701E345226000D055A /* test in Resources */,
-				EC48FF781E345C72000D055A /* lomoDesc.html in Resources */,
-				EC48FF7A1E345C72000D055A /* version.txt in Resources */,
 				EC48FF471E344DF3000D055A /* LaunchScreen.storyboard in Resources */,
 				EC48FF441E344DF3000D055A /* Assets.xcassets in Resources */,
-				EC48FF791E345C72000D055A /* print_img_detail_lomo.png in Resources */,
-				EC48FF771E345C72000D055A /* jquery.min.js in Resources */,
 				EC48FF421E344DF3000D055A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +538,7 @@
 				EC48FF631E344DF3000D055A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC48FF641E344DF3000D055A /* Build configuration list for PBXNativeTarget "DCWKWebViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +547,7 @@
 				EC48FF661E344DF3000D055A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC48FF671E344DF3000D055A /* Build configuration list for PBXNativeTarget "DCWKWebViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +556,7 @@
 				EC48FF691E344DF3000D055A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
